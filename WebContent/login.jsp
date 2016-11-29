@@ -8,12 +8,13 @@
 </head>
 <body>
 
-<form action="login" method="get">
+<form action="LoginServlet" method="post">
   Enter Your Email<br>
   <input type="text" name="email" id="email" value = ""></input>
   <br>
   Enter Your Password<br>
   <input type="text" name="password" id="password" value = ""></input>
+  <input type="hidden" name="action" id="action" value = "login"></input>
   <br><br>
   <input type="submit" value="Submit" ></input>
 </form> 
