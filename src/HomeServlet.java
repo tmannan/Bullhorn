@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import customTools.DbUser;
 import model.Bhuser;
 
 /**
@@ -52,10 +53,14 @@ public class HomeServlet extends HttpServlet {
 		    response.sendRedirect(request.getContextPath() + nextURL);
 		    return;//return prevents an error
 		}
+	
 		 
 		//get user information from session so we can connect to the db
 		Bhuser user = (Bhuser)session.getAttribute("user");
 		 
+		user.setMotto(posttext);
+		DbUser.update(user);
+		 nextURL = "/newsfeed.jsp";
 		//go to the newsfeed or error
 		getServletContext().getRequestDispatcher(nextURL).forward(request, response);
 	}

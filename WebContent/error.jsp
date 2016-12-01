@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>This is the newsfeed page</h1>
+<h1>Invalid User entered</h1>
 </body>
 </html>

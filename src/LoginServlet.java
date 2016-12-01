@@ -50,7 +50,6 @@ public class LoginServlet extends HttpServlet {
 		if (action.equals("logout")){
 			session.invalidate();
 			nextURL = "/login.jsp";
-
 		}else{
 			user = DbUser.getUserByEmail(useremail);
 			if (DbUser.isValidUser(useremail, userpassword)){
@@ -61,10 +60,11 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("gravatarURL", gravatarURL);
 				nextURL = "/home.jsp";
 			}else{
-				nextURL = "/login.jsp";
+				nextURL = "/error.jsp";
 			}
-
+			
 		}
+		//user.setMotto(motto);
 		//redirect to next page as indicated by the value of the nextURL variable
 		//getServletContext().getRequestDispatcher(nextURL).forward(request,response);
 		response.sendRedirect(request.getContextPath() + nextURL);

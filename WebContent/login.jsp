@@ -18,6 +18,6 @@
   <br><br>
   <input type="submit" value="Submit" ></input>
 </form> 
-
+<jsp:include page="footer.jsp" />
 </body>
 </html>
