@@ -16,10 +16,10 @@
  
  <ul class="nav navbar-nav">
  <li class="active"><a href="home.jsp">Home<span class="sr-only">(current)</span></a></li>
- <li><a href="Newsfeed">News Feed</a></li> 
+ <li><a href=NewsfeedServlet>News Feed</a></li> 
  </ul>
  
- <form class="navbar-form navbar-right" role="search" action="Newsfeed" method="get">
+ <form class="navbar-form navbar-right" role="search" action="NewsfeedServlet" method="get">
  <div class="form-group">
  <input type="text" class="form-control" placeholder="Search" name="searchtext">
  </div>
@@ -28,7 +28,7 @@
  
  <ul class="nav navbar-nav navbar-right">
  <% if (session.getAttribute("user") != null) { %>
- <li><a href="ProfileServlet?userid=${user.bhuserid}&action=viewprofile"><img alt="${user.username}" src="${gravatarURL}"/>&nbsp;${user.username}</a></li>
+ <li><a href="ProfileServlet?userid=${user.bhuserid}&action=profile"><img alt="${user.username}" src="${gravatarURL}"/>&nbsp;${user.username}</a></li>
  <% } %>
  <li class="dropdown">
  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Options <span class="caret"></span></a>

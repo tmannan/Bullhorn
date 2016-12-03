@@ -11,7 +11,7 @@ import model.Bhpost;
 
 public class DbBullhorn {
 
-	public static int insert(java.util.Date postdate,String posttext,int userid) {
+	public static int insert(java.util.Date postdate,String posttext,long userid) {
 		String sql = "insert into bhpost (postdate,posttext,bhuserid) " +
 				"values(?,?,?)";
 		int recordsAffected = 0;
@@ -24,7 +24,7 @@ public class DbBullhorn {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setDate(1,new java.sql.Date(postdate.getTime()));
 			pstmt.setString(2, posttext);
-			pstmt.setInt(3, userid);
+			pstmt.setLong(3, userid);
 			recordsAffected = pstmt.executeUpdate();
 		}catch (SQLException e) {
 			e.printStackTrace();

@@ -33,7 +33,7 @@ public class DbUser {
 			rs = pstmt.executeQuery();
 			if (rs.next()){
 				user = new Bhuser();
-				user.setBhuserid(rs.getLong(1));
+				user.setBhuserid(rs.getInt(1));
 				user.setUsername(rs.getString(2));
 				user.setUseremail(rs.getString(3));
 				user.setUserpassword(rs.getString(4));
@@ -185,7 +185,7 @@ public class DbUser {
 			rs = pstmt.executeQuery();
 			if (rs.next()){
 				user = new Bhuser();
-				user.setBhuserid(rs.getLong(1));
+				user.setBhuserid(rs.getInt(1));
 				user.setUsername(rs.getString(2));
 				user.setUseremail(rs.getString(3));
 				user.setUserpassword(rs.getString(4));
