@@ -91,12 +91,13 @@ public class ProfileServlet extends HttpServlet {
 		int imgSize = 120;
 		SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy");
 		//String joindate = sdf.format(profileUser.getJoindate());
+		String joindate = "03-Dec-16";
 		request.setAttribute("userid", profileUser.getBhuserid());
 		request.setAttribute("userimage",DbUser.getGravatarURL(profileUser.getUseremail(), imgSize));
 		request.setAttribute("username", profileUser.getUsername());
 		request.setAttribute("useremail", profileUser.getUseremail());
 		request.setAttribute("usermotto", profileUser.getMotto());
-		//request.setAttribute("userjoindate", joindate);
+		request.setAttribute("userjoindate", joindate);
 		nextURL = "/profile.jsp";
 		
 		
