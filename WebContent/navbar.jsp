@@ -43,7 +43,7 @@
  <button class="btn btn-default" id="addBookButton">Logout</button> 
  </form>
  </li>
- <li><a href="Newsfeed?userid=${user.bhuserid }">Show my Posts</a></li>
+ <li><a href="NewsfeedServlet?userid=${user.bhuserid }">Show my Posts</a></li>
  <li><a href="ProfileServlet?userid=${user.bhuserid }&action=editprofile">Edit Profile</a></li>
  <li role="separator" class="divider"></li>
  <li><a href="support.jsp">Feedback</a></li>

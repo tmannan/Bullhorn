@@ -15,6 +15,8 @@ public class Bhusertest {
 	public void getUserTest() {
 		Bhuser testUser = DbUser.getUserByEmail("user2@domain.com");
 		assertTrue(testUser.getBhuserid() == 2);
+		/* this is a negative test, this will also pass */
+		//assertFalse(testUser.getBhuserid() == 3);
 	}
 
 }

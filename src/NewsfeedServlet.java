@@ -52,8 +52,16 @@ public class NewsfeedServlet extends HttpServlet {
 		//get posts based on parameters; if no parameters then get all posts
 		List<Bhpost> posts = null;
 		if (request.getParameter("userid")!=null){
-			filterByUserID = Integer.parseInt(request.getParameter("userid"));
-			posts = DbBullhorn.postsofUser(filterByUserID);
+			filterByUserID = Long.parseLong(request.getParameter("userid"));
+			try {
+				posts = DbBullhorn.postsofUser(filterByUserID);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}else if (request.getParameter("searchtext")!=null){
 			searchtext = request.getParameter("searchtext").toString();
 			posts = DbBullhorn.searchPosts(searchtext);
