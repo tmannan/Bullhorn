@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,12 +33,15 @@ public class AddUserServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String useremail = request.getParameter("email");
 		String password = request.getParameter("password");
-		String joindate = "05-Dec-16";
+		String motto = request.getParameter("motto");
+		Date date = new Date();
 		Bhuser newUser = new Bhuser();
 		newUser.setUseremail(useremail);
 		newUser.setUserpassword(password);
-		newUser.setMotto("new user");
-		newUser.setJoindate(joindate);
+		newUser.setMotto(motto);
+		//newUser.setJoindate(date);
+		
+	
 		
 		System.out.println("AddUserServlet: useremail:" + useremail +  ", password:" + password);
 		response.getWriter().append("Served at AddUser AddUserServlet: ").append(request.getContextPath());
