@@ -27,7 +27,8 @@ public class DbUser {
 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setLong(1,bhuserID);
 			rs = pstmt.executeQuery();
@@ -40,10 +41,6 @@ public class DbUser {
 				//user.setJoindate(java.util.Date(rs.getString(5)));
 				user.setMotto(rs.getString(6));
 			}
-
-
-
-
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}catch (ClassNotFoundException e) {
@@ -71,7 +68,8 @@ public class DbUser {
 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1,bhUser.getUsername());
 			pstmt.setString(2, bhUser.getUseremail());
@@ -132,7 +130,8 @@ public class DbUser {
 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, bhuser.getUsername());
 			pstmt.setString(2, bhuser.getUserpassword());
@@ -179,7 +178,8 @@ public class DbUser {
 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1,useremail);
 			rs = pstmt.executeQuery();
@@ -192,10 +192,7 @@ public class DbUser {
 				//user.setJoindate(java.util.Date(rs.getString(5)));
 				user.setMotto(rs.getString(6));
 			}
-
-
-
-
+			
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}catch (ClassNotFoundException e) {
@@ -235,7 +232,8 @@ public class DbUser {
 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1,useremail);
 			pstmt.setString(2, userpassword);

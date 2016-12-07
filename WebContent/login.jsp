@@ -17,7 +17,7 @@
  <input name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
  <input type="hidden" name="action" id="action" value="login"/>
  <label for="inputPassword" class="sr-only">Password</label>
- <input name="password" type="passwords" id="inputPassword" class="form-control" placeholder="Password" required>
+ <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
  </form>
  <a href="adduser.jsp">Join</a>

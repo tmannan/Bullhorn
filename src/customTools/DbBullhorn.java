@@ -20,7 +20,8 @@ public class DbBullhorn {
 
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+			con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setDate(1,new java.sql.Date(postdate.getTime()));
 			pstmt.setString(2, posttext);
@@ -55,7 +56,8 @@ public class DbBullhorn {
 		PreparedStatement pstmt = null;
 
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+		//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+		con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 		pstmt = con.prepareStatement(sql);
 		rs = pstmt.executeQuery();
 		// Fetch each row from the result set
@@ -88,8 +90,8 @@ public class DbBullhorn {
 
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
-		// con = DriverManager.getConnection("jdbc:oracle:thin:<username>/<password>@localhost:1521:<connection_name");
+		//con = DriverManager.getConnection("jdbc:oracle:thin:ora1/ora1@localhost:1521:orcl");
+		con = DriverManager.getConnection("jdbc:oracle:thin:tmannan/tmannan@localhost:1521:xe");
 		pstmt = con.prepareStatement(sql);
 		pstmt.setLong(1, userid);
 		rs = pstmt.executeQuery();
